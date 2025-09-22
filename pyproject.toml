@@ -6,10 +6,10 @@ build-backend = "setuptools.build_meta"
 # can be empty if no extra settings are needed, presence enables setuptools-scm
 
 [project.urls]
-Homepage = "PLUGIN_HOMEPAGE"
+Homepage = "https://github.com/Marvmann/QUARK-plugin-circuit-visualizer-test"
 
 [project]
-name = "PLUGIN_NAME"
+name = "QUARK-plugin-circuit-visualizer-test"
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.12"
