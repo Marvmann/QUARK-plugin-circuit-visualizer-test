@@ -2,11 +2,11 @@ from dataclasses import dataclass
 from typing import override
 
 from quark.core import Core, Result
-from quark.interface_types import InterfaceType
-
+from quark.interface_types import InterfaceType, Other, Data
+from qiskit import QuantumCircuit
 
 @dataclass
-class ExampleModule(Core):
+class CircuitVisualization(Core):
     """
     This is an example module following the recommended structure for a quark module.
 
@@ -16,9 +16,10 @@ class ExampleModule(Core):
     """
 
     @override
-    def preprocess(self, data: InterfaceType) -> Result:
-        raise NotImplementedError
+    def preprocess(self, circuit: Other[QuantumCircuit]) -> Result:
+        circuit.draw()
+        return Data(Other(circuit))
 
     @override
-    def postprocess(self, data: InterfaceType) -> Result:
-        raise NotImplementedError
+    def postprocess(self, result: Other[dict]) -> Result:
+        return Data(Other(result))

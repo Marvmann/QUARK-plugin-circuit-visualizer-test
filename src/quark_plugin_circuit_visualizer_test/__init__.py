@@ -1,6 +1,6 @@
 from quark.plugin_manager import factory
 
-from quark_plugin_circuit_visualizer_test.example_module import ExampleModule
+from quark_plugin_circuit_visualizer_test.circuit_visualization import CircuitVisualization
 
 def register() -> None:
     """
@@ -10,4 +10,4 @@ def register() -> None:
 
     The "module_name" will later be used to refer to the module in the configuration file.
     """
-    factory.register("example_module", ExampleModule)
+    factory.register("circuit_visualization", CircuitVisualization)

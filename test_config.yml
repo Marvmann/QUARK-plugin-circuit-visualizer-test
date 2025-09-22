@@ -1,0 +1,7 @@
+plugins: [
+    "quark_plugin_mqss" # , "quark-plugin-circuit-visualizer-test"
+    ]
+
+pipeline: [
+    "circuit_provider", "circuit_visualization", "job_execution"
+]
